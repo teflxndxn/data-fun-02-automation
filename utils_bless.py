@@ -27,6 +27,11 @@ years_in_operation: int = 3
 average_client_satisfaction: float = 4.8
 skills_offered: list = ["Data Engineering", "BI Dashboards", "Data Storytelling"]
 
+# New company-specific info
+company_name: str = "Blessing Analytics"
+target_industries: list = ["Retail", "Healthcare", "Finance", "Education"]
+services_offered: list = ["Data Cleaning", "Visualization", "Predictive Modeling", "ETL Pipelines"]
+
 # Client feedback scores for satisfaction
 client_satisfaction_scores: list = [4.9, 4.7, 4.8, 5.0, 4.6]
 
@@ -36,13 +41,15 @@ max_score: float = max(client_satisfaction_scores)
 mean_score: float = statistics.mean(client_satisfaction_scores)
 stdev_score: float = statistics.stdev(client_satisfaction_scores)
 
-# Byline output
+# Byline output with new data
 byline: str = f"""
 ---------------------------------------------------------
-Blessing Analytics: Empowering Smarter Business Decisions
+{company_name}: Empowering Smarter Business Decisions
 ---------------------------------------------------------
 Has International Clients:  {has_international_clients}
 Years in Operation:         {years_in_operation}
+Target Industries:          {target_industries}
+Services Offered:           {services_offered}
 Skills Offered:             {skills_offered}
 Client Satisfaction Scores: {client_satisfaction_scores}
 Minimum Satisfaction Score: {min_score}
@@ -66,9 +73,9 @@ def get_byline() -> str:
 
 def main() -> None:
     """Print the byline when this file is run as a script."""
-    print("START main() in utils_steph.py")
+    print("START main() in utils_bless.py")
     print(get_byline())
-    print("END main() in utils_steph.py")
+    print("END main() in utils_bless.py")
 
 
 #####################################
