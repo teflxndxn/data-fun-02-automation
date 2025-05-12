@@ -45,7 +45,7 @@ def get_most_populous_state(states_with_population: dict) -> tuple:
 # ----------------------------------
 
 def main():
-    """Run automation examples using functions from this project."""
+
     print("\nWelcome to Blessing Analytics!\n")
     print(utils_bless.get_byline())
 
