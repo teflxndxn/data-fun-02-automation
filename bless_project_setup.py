@@ -10,6 +10,9 @@ Author: Blessing Aganaga
 # ----------------------------------
 import utils_bless
 
+import os
+
+
 # ----------------------------------
 # Additional Functions for Project 2
 # ----------------------------------
@@ -40,12 +43,20 @@ def get_most_populous_state(states_with_population: dict) -> tuple:
             most_populous = (state, population)
     return most_populous
 
+# Place this function outside main()
+def create_project_directories(base_path, dir_names):
+    for name in dir_names:
+        dir_path = os.path.join(base_path, name)
+        os.makedirs(dir_path, exist_ok=True)
+        # Optional: create a README inside each folder for clarity
+        with open(os.path.join(dir_path, "README.md"), "w") as f:
+            f.write(f"# {name}\nThis folder is for {name}")
+
 # ----------------------------------
 # Main Function
 # ----------------------------------
 
 def main():
-    """Run automation examples using functions from this project."""
     print("\nWelcome to Blessing Analytics!\n")
     print(utils_bless.get_byline())
 
@@ -77,6 +88,15 @@ def main():
     # Most populous state
     state, pop = get_most_populous_state(states_with_population)
     print(f"\nMost Populous State: {state} with a population of {pop} million")
+    
+    # List of directories you want to create
+    directories = [
+        "data", "scripts", "notebooks", "images", "reports",
+        "models", "tests", "docs", "exports", "logs", "temp"
+    ]
+
+    # Call directory creation function
+    create_project_directories('.', directories)
 
 # ----------------------------------
 # Conditional Script Execution
