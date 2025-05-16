@@ -57,6 +57,7 @@ def create_project_directories(base_path, dir_names):
 # ----------------------------------
 
 def main():
+
     print("\nWelcome to Blessing Analytics!\n")
     print(utils_bless.get_byline())
 
