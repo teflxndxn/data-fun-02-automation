@@ -12,7 +12,6 @@ import utils_bless
 
 import os
 
-
 # ----------------------------------
 # Additional Functions for Project 2
 # ----------------------------------
@@ -96,8 +95,8 @@ def main():
         "models", "tests", "docs", "exports", "logs", "temp"
     ]
 
-    # Call directory creation function
-    create_project_directories('.', directories)
+    # Call directory creation function inside 'MyProject/'
+    create_project_directories('MyProject', directories)
 
 # ----------------------------------
 # Conditional Script Execution
